@@ -36,6 +36,20 @@
 </head>
 <body>
 
+    <!--Tab panes-->
+
+    <div class="leaflet-sidebar-content">
+        <div class="leaflet-sidebar-pane" id="home">
+         <h1 class="leaflet-sidebar-header">
+            Mi primer extension
+         </h1>
+         <p>
+            <button type="button" onclick="addCapa()">Añadir capa</button>
+            <button type="button" onclick="quitCapa()">Eliminar capa</button>
+        </p>
+        </div>
+    </div>
+
     <div id="mapa"></div>
 <!--agregar el mapa en js, cada elemento del mapa es objeto-->
     <script type="text/javascript">
@@ -137,6 +151,21 @@
         style: estiloPersonalizado
     }).addTo(map);
 
+    var sidebar = L.control.sidebar({
+        autopan: false,
+        closeButton: true,
+        container: 'sidebar',
+        position:'left'
+    }).addTo(map);
+
+    function addCapa() {
+        // alert("probando");
+        capa_regiones.addTo(map);
+    }
+
+    function quitCapa(){
+        capa_regiones.remove();
+    }
     </script>
     
 </body>
