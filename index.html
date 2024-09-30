@@ -62,8 +62,20 @@
     color: 'green',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 1000
+    radius: 10000
     }).addTo(map);
+
+    //marcador poligono
+    var polygon = L.polygon([
+    [-31.73, -60.52],
+    [-31.50, -61.00],
+    [-31.58, -61.047]
+    ]).addTo(map);
+
+    //mensajes
+    marker.bindPopup("<b>Hola Mundo!</b><br>Soy un mensaje").openPopup();
+    circle.bindPopup("Soy el círculo");
+    polygon.bindPopup("Aquí esta el polígono");
 
     </script>
     
