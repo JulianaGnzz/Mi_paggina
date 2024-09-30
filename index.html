@@ -111,25 +111,13 @@
                d == 15 ? '#800026':
                d == 16 ? '#BD4426':
                d == 17 ? '#800026':
-               d == 18 ? '#BD4426':
-               d == 19 ? '#800026':
-               d == 20 ? '#BD4426':
-               d == 21 ? '#800026':
-               d == 22 ? '#BD4426':
-               d == 23 ? '#800026':
-               d == 24 ? '#BD4426':
-               d == 25 ? '#800026':
-               d == 26 ? '#BD4426':
-               d == 27 ? '#800026':
-               d == 28 ? '#BD4426':
-               d == 29 ? '#800026':
-                        '000ccc';
+                          '000ccc';
 
     }
     
     function estiloPersonalizado(feature) {
         return{
-            fillColor: getColor(feature.properties.gid),
+            fillColor: getColor(feature.properties.id),
             weight: 2,
             opacity: 1,
             color: 'white',
@@ -139,7 +127,7 @@
     }
 
     function onEachFeature(feature, layer) {
-        var popupContent = 'Región: ' + feature.properties.gid + "<br/>Nombre: " + feature.properties.nam;
+        var popupContent = 'Región: ' + feature.properties.id + "<br/>Departamento: " + feature.properties.departamento;
         layer.bindPopup(popupContent);
     }
 
