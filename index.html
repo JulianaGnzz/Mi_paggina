@@ -37,14 +37,27 @@
 <!--agregar el mapa en js, cada elemento del mapa es objeto-->
     <script type="text/javascript">
     
-    var osm = new L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    var satelite = new L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
      minZoom: 1,
-     attribution:'Mapa'
+
+      }
+    );
+
+    var osm = new L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+     minZoom: 1,
+      }
+    );
+
+    var darkm = new L.tileLayer('http://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+     minZoom: 1,
       }
     );
 
     var baseLayers = {
-     "Satelital": osm
+     "Satelital": satelite,
+     "ESRI Topo": osm,
+     "CARTO dark": darkm
+
     };
 
     var map = L.map('mapa',{
