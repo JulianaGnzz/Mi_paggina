@@ -27402,7 +27402,7 @@ var regiones ={
           "properties": {
            "id": 7,
            "departamento": "TALA",
-           "cabecera": "RISARIO DEL TALA",
+           "cabecera": "ROSARIO DEL TALA",
            "provincia": "ENTRE RIOS"
           },
           "geometry": {
@@ -69150,7 +69150,7 @@ var regiones ={
           "properties": {
            "id": 16,
            "departamento": "URUGUAY",
-           "cabecera": "CONCEPCI\u00d2N DEL URUGUAY",
+           "cabecera": "CONCEPCIÓN DEL URUGUAY",
            "provincia": "ENTRE RIOS"
           },
           "geometry": {

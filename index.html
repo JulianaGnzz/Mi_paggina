@@ -127,7 +127,7 @@
     }
 
     function onEachFeature(feature, layer) {
-        var popupContent = 'Región: ' + feature.properties.id + "<br/>Departamento: " + feature.properties.departamento;
+        var popupContent = 'Departamento: ' + feature.properties.departamento + "<br/>Cabecera: " + feature.properties.cabecera;
         layer.bindPopup(popupContent);
     }
 
