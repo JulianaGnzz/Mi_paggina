@@ -20,6 +20,7 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
     <script src="js/leaflet-sidebar.min.js"></script>
+    <script src="js/leaflet.wms.js"></script>
 
     <!--Datos GeoJSON, no es necesario colocar el tipo-->
     <script src="js/regiones.js"></script>
@@ -212,8 +213,8 @@
 
     //Utilizando un plugin con funcionalidad extendida
     var source=L.WMS.source("http://geo.municipalidadsalta.gob.ar:8080/geoserver/wms", {
-        'transparent': true,
-        'format':'image/png'
+        transparent: true,
+        format: 'image/png'
     });
     source.getLayer("public:Plataciones").addTo(map);
     </script>
