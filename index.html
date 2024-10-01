@@ -110,9 +110,16 @@
         layers: [osm]
     });
     L.control.layers(baseLayers).addTo(map);
-    // agregar WMS
 
-    
+    // agregar WMS
+    var wmsLayer=L.tileLayer.wms('http://geo.municipalidadsalta.gob.ar:8080/geoserver/wms',{
+        layers: 'public:Plataciones',
+        transparent: true,
+        format: 'image/png'
+    }).addTo(map);
+    wmsLayer.bringToFront();
+
+
 
 
 
