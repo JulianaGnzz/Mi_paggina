@@ -111,18 +111,6 @@
     });
     L.control.layers(baseLayers).addTo(map);
 
-    // agregar WMS
-    var wmsLayer=L.tileLayer.wms('http://geo.municipalidadsalta.gob.ar:8080/geoserver/wms',{
-        layers: 'public:Plataciones',
-        transparent: true,
-        format: 'image/png'
-    }).addTo(map);
-    wmsLayer.bringToFront();
-
-
-
-
-
 /*//para agregar un marcador
 
     var marker = L.marker([-31.73, -60.52]).addTo(map);
@@ -213,6 +201,21 @@
     container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
     position: 'left',     // left or right
     }).addTo(map);
+
+        // agregar WMS
+    var wmsLayer=L.tileLayer.wms('http://geo.municipalidadsalta.gob.ar:8080/geoserver/wms',{
+        layers: 'public:Plataciones',
+        transparent: true,
+        format: 'image/png'
+    }).addTo(map);
+    wmsLayer.bringToFront();
+
+    //Utilizando un plugin con funcionalidad extendida
+    var source=L.WMS.source("http://geo.municipalidadsalta.gob.ar:8080/geoserver/wms", {
+        'transparent': true,
+        'format':'image/png'
+    });
+    source.getLayer("public:Plataciones").addTo(map);
     </script>
     
 </body>
